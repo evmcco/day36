@@ -20,9 +20,7 @@ router.get('/', async function(req, res, next) {
 router.post('/', (req,res) => {
     const topic = req.body.topic;
     const rank = req.body.Rank;
-    // console.log("request body:", req.body)
     console.log("topic", topic, "rank", rank)
-    // topicsModel.updateRank(topic,rank)
     topicsModel.updateAllRanks(topic, rank)
     .then(async () => {
         // res.status(200).send('SUCCESS!');

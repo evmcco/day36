@@ -4,45 +4,26 @@
             <thead>
                 <tr>
                     <td>Topic</td>
-                    <td>Rank</td>
-                    <td>Description</td>
+                    <td>Current Rank</td>
                     <td>New Rank</td>
                 </tr>
             </thead>
             ${topicsList.map(topic => 
                 `<tr>
                     <td><input type="text" name="topic" value=${topic.topic} style="border-style: none; font-size: 1em; font-weight: 400;"readonly></td> 
-                    <td>${topic.number}</td>
-                    <td>${topic.name}</td>
+                    <td>${topic.number} - ${topic.name}</td>
                     <td> <select name="Rank">
-                        <option value = "0">0</option>
-                        <option value = "1">1</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5</option>
+                        <option value = "0">0 - Unranked</option>
+                        <option value = "1">1 - Poor</option>
+                        <option value = "2">2 - Okay</option>
+                        <option value = "3">3 - Good</option>
+                        <option value = "4">4 - Great</option>
+                        <option value = "5">5 - Awesome</option>
                     </select></td>
                 </tr>`
                 ).join('')
             }
         </table>    
     </section>
-    <!-- <h2>Submit a topic and rank to update:</h2>
-    <select name="Topic">
-        <option value = "HTML">HTML</option>
-        <option value = "CSS">CSS</option>
-        <option value = "Javascript">Javascript</option>
-        <option value = "PostgreSQL">PostgreSQL</option>
-        <option value = "Node">Node</option>
-        <option value = "Express">Express</option>
-    </select>
-    <select name="Rank">
-        <option value = "0">0 - Unranked</option>
-        <option value = "1">1 - Poor</option>
-        <option value = "2">2 - Okay</option>
-        <option value = "3">3 - Good</option>
-        <option value = "4">4 - Great</option>
-        <option value = "5">5 - Awesome</option>
-    </select> -->
     <button type="submit" class="is-primary">Submit</button>
 </form>

@@ -35,7 +35,6 @@ class topics {
                             ('${topicArray[5]}', ${newRankArray[5]})
                         ) as c(topic, number)
                         where t.topic = c.topic`;
-        // console.log("Update Query", query);
         try {
             let response = await db.result(query);
             return response;
@@ -47,11 +46,3 @@ class topics {
 }
 
 module.exports = topics;
-
-// update topics as t set
-//     number = c.number
-// from (values
-//     ('Node', 5),
-//     ('Express', 0)
-// ) as c(topic, number)
-// where t.topic = c.topic;
